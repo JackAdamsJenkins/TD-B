@@ -133,3 +133,17 @@ localStorage.setItem('prenom', "Jean-Louis")
 // localStorage.getItem("clé")
 const prenom = localStorage.getItem('prenom')
 console.log(prenom)
+
+const person = {
+    prenom: "Jean-Louis",
+    nom: "Errante",
+    age: 29
+}
+
+const strPerson = JSON.stringify(person)
+
+localStorage.setItem('person', strPerson)
+
+const parsePerson = JSON.parse(localStorage.getItem('person'))
+
+console.log(parsePerson)
